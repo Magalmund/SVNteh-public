@@ -1,0 +1,655 @@
+/*GRID*/
+html {height:100%; box-sizing:border-box; -ms-overflow-style:scrollbar}
+*, *::before, *::after {box-sizing:inherit}
+
+.container-fluid {width:100%; margin-right:auto; margin-left:auto}
+.row {display:-ms-flexbox; display:flex; -ms-flex-wrap:wrap; flex-wrap:wrap; margin-right:-15px; margin-left:-15px}
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
+.col-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
+.col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg,
+.col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl,
+.col-xl-auto {position:relative; width:100%; padding-right:15px; padding-left:15px}
+
+.col {-ms-flex-preferred-size:0; flex-basis:0; -ms-flex-positive:1; flex-grow:1; max-width:100%}
+.col-1 {-ms-flex:0 0 8.333333%; flex:0 0 8.333333%; max-width:8.333333%}
+.col-2 {-ms-flex:0 0 16.666667%; flex:0 0 16.666667%; max-width:16.666667%}
+.col-3 {-ms-flex:0 0 25%; flex:0 0 25%; max-width:25%}
+.col-4 {-ms-flex:0 0 33.333333%; flex:0 0 33.333333%; max-width:33.333333%}
+.col-5 {-ms-flex:0 0 41.666667%; flex:0 0 41.666667%; max-width:41.666667%}
+.col-6 {-ms-flex:0 0 50%; flex:0 0 50%; max-width:50%}
+.col-7 {-ms-flex:0 0 58.333333%; flex:0 0 58.333333%; max-width:58.333333%}
+.col-8 {-ms-flex:0 0 66.666667%; flex:0 0 66.666667%; max-width:66.666667%}
+.col-9 {-ms-flex:0 0 75%; flex:0 0 75%; max-width:75%}
+.col-10 {-ms-flex:0 0 83.333333%; flex:0 0 83.333333%; max-width:83.333333%}
+.col-11 {-ms-flex:0 0 91.666667%; flex:0 0 91.666667%; max-width:91.666667%}
+.col-12 {-ms-flex:0 0 100%; flex:0 0 100%; max-width:100%}
+
+@media (min-width: 576px) {
+.col-sm {-ms-flex-preferred-size:0; flex-basis:0; -ms-flex-positive:1; flex-grow:1; max-width:100%}
+.col-sm-auto {-ms-flex:0 0 auto; flex:0 0 auto; width:auto; max-width:100%}
+.col-sm-1 {-ms-flex:0 0 8.333333%; flex:0 0 8.333333%; max-width:8.333333%}
+.col-sm-2 {-ms-flex:0 0 16.666667%; flex:0 0 16.666667%; max-width:16.666667%}
+.col-sm-3 {-ms-flex:0 0 25%; flex:0 0 25%; max-width:25%}
+.col-sm-4 {-ms-flex:0 0 33.333333%; flex:0 0 33.333333%; max-width:33.333333%}
+.col-sm-5 {-ms-flex:0 0 41.666667%; flex:0 0 41.666667%; max-width:41.666667%}
+.col-sm-6 {-ms-flex:0 0 50%; flex:0 0 50%; max-width:50%}
+.col-sm-7 {-ms-flex:0 0 58.333333%; flex:0 0 58.333333%; max-width:58.333333%}
+.col-sm-8 {-ms-flex:0 0 66.666667%; flex:0 0 66.666667%; max-width:66.666667%}
+.col-sm-9 {-ms-flex:0 0 75%; flex:0 0 75%; max-width:75%}
+.col-sm-10 {-ms-flex:0 0 83.333333%; flex:0 0 83.333333%; max-width:83.333333%}
+.col-sm-11 {-ms-flex:0 0 91.666667%; flex:0 0 91.666667%; max-width:91.666667%}
+.col-sm-12 {-ms-flex:0 0 100%; flex:0 0 100%; max-width:100%}
+}
+
+@media (min-width:768px) {
+.container {max-width:720px;}
+.col-md {-ms-flex-preferred-size:0; flex-basis:0; -ms-flex-positive:1; flex-grow:1; max-width:100%}
+.col-md-auto {-ms-flex:0 0 auto; flex:0 0 auto; width:auto; max-width:100%}
+.col-md-1 {-ms-flex:0 0 8.333333%; flex:0 0 8.333333%; max-width:8.333333%}
+.col-md-2 {-ms-flex:0 0 16.666667%; flex:0 0 16.666667%; max-width:16.666667%}
+.col-md-3 {-ms-flex:0 0 25%; flex:0 0 25%; max-width:25%}
+.col-md-4 {-ms-flex:0 0 33.333333%; flex:0 0 33.333333%; max-width:33.333333%}
+.col-md-5 {-ms-flex:0 0 41.666667%; flex:0 0 41.666667%; max-width:41.666667%}
+.col-md-6 {-ms-flex:0 0 50%; flex:0 0 50%; max-width:50%}
+.col-md-7 {-ms-flex:0 0 58.333333%; flex:0 0 58.333333%; max-width:58.333333%}
+.col-md-8 {-ms-flex:0 0 66.666667%; flex:0 0 66.666667%; max-width:66.666667%}
+.col-md-9 {-ms-flex:0 0 75%; flex:0 0 75%; max-width:75%}
+.col-md-10 {-ms-flex:0 0 83.333333%; flex:0 0 83.333333%; max-width:83.333333%}
+.col-md-11 {-ms-flex:0 0 91.666667%; flex:0 0 91.666667%; max-width:91.666667%}
+.col-md-12 {-ms-flex:0 0 100%; flex:0 0 100%; max-width:100%}
+}
+
+@media (min-width:1024px) {
+.container {max-width:960px;}
+.col-lg {-ms-flex-preferred-size:0; flex-basis:0; -ms-flex-positive:1; flex-grow:1; max-width:100%}
+.col-lg-auto {-ms-flex:0 0 auto; flex:0 0 auto; width:auto; max-width:100%}
+.col-lg-1 {-ms-flex:0 0 8.333333%; flex:0 0 8.333333%; max-width:8.333333%}
+.col-lg-2 {-ms-flex:0 0 16.666667%; flex:0 0 16.666667%; max-width:16.666667%}
+.col-lg-3 {-ms-flex:0 0 25%; flex:0 0 25%; max-width:25%}
+.col-lg-4 {-ms-flex:0 0 33.333333%; flex:0 0 33.333333%; max-width:33.333333%}
+.col-lg-5 {-ms-flex:0 0 41.666667%; flex:0 0 41.666667%; max-width:41.666667%}
+.col-lg-6 {-ms-flex:0 0 50%; flex:0 0 50%; max-width:50%}
+.col-lg-7 {-ms-flex:0 0 58.333333%; flex:0 0 58.333333%; max-width:58.333333%}
+.col-lg-8 {-ms-flex:0 0 66.666667%; flex:0 0 66.666667%; max-width:66.666667%}
+.col-lg-9 {-ms-flex:0 0 75%; flex:0 0 75%; max-width:75%}
+.col-lg-10 {-ms-flex:0 0 83.333333%; flex:0 0 83.333333%; max-width:83.333333%}
+.col-lg-11 {-ms-flex:0 0 91.666667%; flex:0 0 91.666667%; max-width:91.666667%}
+.col-lg-12 {-ms-flex:0 0 100%; flex:0 0 100%; max-width:100%}
+}
+
+@media (min-width:1600px) {
+.container {max-width:1140px;}
+.col-xl {-ms-flex-preferred-size:0; flex-basis:0; -ms-flex-positive:1; flex-grow:1; max-width:100%}
+.col-xl-auto {-ms-flex:0 0 auto; flex:0 0 auto; width:auto; max-width:100%}
+.col-xl-1 {-ms-flex:0 0 8.333333%; flex:0 0 8.333333%; max-width:8.333333%}
+.col-xl-2 {-ms-flex:0 0 16.666667%; flex:0 0 16.666667%; max-width:16.666667%}
+.col-xl-3 {-ms-flex:0 0 25%; flex:0 0 25%; max-width:25%}
+.col-xl-4 {-ms-flex:0 0 33.333333%; flex:0 0 33.333333%; max-width:33.333333%}
+.col-xl-5 {-ms-flex:0 0 41.666667%; flex:0 0 41.666667%; max-width:41.666667%}
+.col-xl-6 {-ms-flex:0 0 50%; flex:0 0 50%; max-width:50%}
+.col-xl-7 {-ms-flex:0 0 58.333333%; flex:0 0 58.333333%; max-width:58.333333%}
+.col-xl-8 {-ms-flex:0 0 66.666667%; flex:0 0 66.666667%; max-width:66.666667%}
+.col-xl-9 {-ms-flex:0 0 75%; flex:0 0 75%; max-width:75%}
+.col-xl-10 {-ms-flex:0 0 83.333333%; flex:0 0 83.333333%; max-width:83.333333%}
+.col-xl-11 {-ms-flex:0 0 91.666667%; flex:0 0 91.666667%; max-width:91.666667%}
+.col-xl-12 {-ms-flex:0 0 100%; flex:0 0 100%; max-width:100%}
+}
+/*GRID-END*/
+
+/*FLEX*/
+.d-flex {display:-ms-flexbox !important; display:flex !important}
+.justify-content-start {-ms-flex-pack:start !important; justify-content:flex-start !important}
+.justify-content-end {-ms-flex-pack:end !important; justify-content:flex-end !important}
+.justify-content-center {-ms-flex-pack:center !important; justify-content:center !important}
+.justify-content-between {-ms-flex-pack:justify !important; justify-content:space-between !important}
+.justify-content-around {-ms-flex-pack:distribute !important; justify-content:space-around !important}
+.align-items-start {-ms-flex-align:start !important; align-items:flex-start !important}
+.align-items-end {-ms-flex-align:end !important; align-items:flex-end !important}
+.align-items-center {-ms-flex-align:center !important; align-items:center !important}
+.flex-column {-ms-flex-direction:column !important; flex-direction:column !important}
+/*FLEX-END*/
+
+/*FONTS*/
+@font-face {font-family:Lora; src:url('../SVNteh/fonts/Lora/Lora-Regular.ttf') format('truetype')}
+@font-face {font-family:Murecho; src:url('../SVNteh/fonts/Murecho/Murecho-Light.ttf') format('truetype')}
+h1, h2, h3 {font-family:Lora}
+a, span, p, input, textarea {font-family:Murecho}
+/*FONTS-END*/
+
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {-ms-overflow-style:none; scrollbar-width:none; overflow:scroll; scroll-behavior:smooth}
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {display:none}
+body {-ms-overflow-style:none; scrollbar-width:none}
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {display:none}
+
+
+@keyframes morph {
+	0% {border-radius:40% 60% 60% 40% / 70% 30% 70% 30%}
+	100% {border-radius:40% 60%}
+ }
+ 
+ @keyframes spin {
+	to {transform:rotate(1turn)}
+ }
+ 
+ body::before, body::after {content:""; width:70vmax;	height:70vmax; position:fixed; background:rgba(0,0,0,0.07); left:-20vmin; top:-20vmin; animation:morph 10s linear infinite alternate, spin 20s linear infinite; z-index:-1; will-change:border-radius, transform; transform-origin:55% 55%; pointer-events:none}
+ body::after {width:70vmin; height:70vmin; left:auto; right:-10vmin; top:auto; bottom:0; animation:morph 10s linear infinite alternate, spin 26s linear infinite reverse; transform-origin:20% 20%}
+
+
+
+@media (min-width:1px) {
+	/*GLOBAL-PARAMETRS*/
+body {height:100%; margin:0}
+ul {margin:0; padding:0; font-size:0}
+li {list-style:none}
+a {text-decoration:none}
+h1 {font-size:24px; transition:all 0.75s ease-out; font-weight:lighter; text-align:center}
+h2 {font-size:18px; margin:0 0 15px 0; font-weight:lighter; text-align:center}
+h3 {font-size:28px; margin:0 0 30px 0; font-weight:lighter; text-align:center}
+p {margin:0 0 15px 0}
+.table {display:block; width:100%; height:max-content; position:relative; margin:0 0 30px 0}
+.wp-block-image {margin:0!important}
+.container-fluid {overflow:hidden; padding:90px 15px 0px 15px}
+
+
+.img {perspective:1000px; transform-style:preserve-3d}
+.img h1 {transform: translateZ(50px)}
+#portfolio.container-fluid > .row::before, #about.container-fluid > .row::after, #services.container-fluid > .row::after{content:""; display:block; height:2px; width:60%; background:#000}
+/* #portfolio.container-fluid > .row::after {margin:0 0 45px 0} */
+#about.container-fluid > .row::after{margin:90px 0 0 0}
+#portfolio.container-fluid > .row::before, #services.container-fluid > .row::after {margin:60px 0 0 0}
+/*GLOBAL-PARAMETRS-END*/
+
+
+	/*PRELOADER*/
+	.preloader {background:black; position:fixed; top:0; left:0; width:100%; height:100%; display:flex; justify-content:center; align-items:center; flex-direction:column; z-index:10}
+	.slider {background:#fff; position:fixed; top:0; left:0; width:100%; height:100%; transform:translateY(100%); z-index:11}
+	.preloader-logo {display:block; width:202px; height:72px; background:url("../SVNteh/logo/SAN-logo-white.svg"); background-repeat:no-repeat; background-size:cover; margin:0 0 30px 0}
+	.preloader-ring {display:inline-block; position:relative; width:40px; height:40px}
+	.preloader-ring div {box-sizing:border-box; display:block; position:absolute; width:32px; height:32px; margin:4px; border:2px solid #fff; border-radius:50%; animation:preloader-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite; border-color: #fff transparent transparent transparent}
+	.preloader-ring div:nth-child(1) {animation-delay:-0.45s}
+	.preloader-ring div:nth-child(2) {animation-delay:-0.3s}
+	.preloader-ring div:nth-child(3) {animation-delay:-0.15s}
+	@keyframes preloader-ring {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	/*PRELOADER-END*/
+
+	/*NAVBAR*/
+	#SVN.no-scroll {overflow:hidden}
+
+	#navbar {position:absolute; background:transparent; z-index:3; padding:0 15px}
+	#navbar .logo-link {display:block; padding:15px 0}
+	#navbar .logo {display:block; width:150px; height:52px; background:url("../SVNteh/logo/SAN-logo.svg"); background-repeat:repeat; background-size:auto; background-size:cover; transform:translateY(-100px); transition-timing-function:cubic-bezier(.42,0,.34,.99)}
+  #navbar .col-xl-8 {display:none}
+  #navbar .col-xl-2 {display:flex; justify-content:space-between; align-items:center}
+  
+
+	
+	.nav-button{display:inline-block; cursor:pointer; height:max-content; transform:translateY(-100px); transition-timing-function:cubic-bezier(.42,0,.34,.99)}
+	.bar1, .bar2, .bar3 {width:30px; height:2px; margin:8px 0; background:#000; transition:all.4s; border-radius:2px}
+	#open .bar1, #open .bar2, #open .bar3 {background:#000}
+	#open .bar1 {transform:translate(0); opacity:1; transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1); transition-delay:1.12s}
+	#open .bar2 {opacity:1; transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1); transition-delay:1.12s}
+	#open .bar3 {transform:translate(0); opacity:1; transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1); transition-delay:1.12s}
+	#open .bar1.clicked {transform:translate(-30px); opacity:0; transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1)}
+	#open .bar2.clicked {opacity:0; transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1)}
+	#open .bar3.clicked {transform:translate(30px); opacity:0; transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1)}
+	#close {margin:30px 0 0 0}
+	#close .bar1, #close .bar2, #close .bar3 {background:#fff}
+	#close .bar1.clicked {opacity:1; -webkit-transform:rotate(-45deg) translate(-7px, 7px); transform:rotate(-45deg) translate(-7px, 7px)}
+	#close .bar2, #close .bar2.clicked {opacity:0}
+	#close .bar3.clicked {opacity:1; -webkit-transform:rotate(45deg) translate(-7px, -7px); transform:rotate(45deg) translate(-7px, -7px)}
+	#close .bar1 {-webkit-transform: rotate(-45deg) translate(0px, 7px); transform: rotate(135deg) translate(-7px, 7px); opacity:0; transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1)}
+	#close .bar3 {-webkit-transform: rotate(45deg) translate(0px, -7px); transform: rotate(225deg) translate(-7px, -7px); opacity:0; transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1)}
+  #mnav {display:flex; flex-wrap:wrap; justify-content:center; position:fixed; width:100%; height:100%; top:0; right:0; padding:50px 15px; background:#000; overflow:hidden; transform:translateX(110%); transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1); transition-delay:.56s; opacity:0}
+	#mnav.mnav {transform:translateX(0); transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1); transition-delay:.56s; opacity:1}
+  #mnav .navbar-main {position:relative; width:100%}
+  #mnav .navbar-list {position:relative; display:flex; flex-wrap:wrap; height:100%; list-style-type:none; margin:0; padding:0; font-size:0; z-index:1}
+	#mnav li {height:max-content; width:100%}
+  #mnav a {display:block; text-decoration:none; font-size:21px; text-align:center; padding:15px 0px; color:#fff; margin:0; transition:all.3s; font-family:Roboto}
+	#mnav .logo-mnav {display:block; width:202px; height:72px; background:url("../SVNteh/logo/SAN-logo-white.svg"); background-repeat:no-repeat; transform:translateY(-50%); opacity:0; transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1)}
+	#mnav.mnav .logo-mnav { transform:translateY(0); opacity:1; transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1)}
+	#navbar.js-enter .logo {transform:translateY(0); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:2.5s; transition-duration:1.5s; transition-property:transform}
+	#navbar.js-enter .nav-button {transform:translateY(0); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:2.6s; transition-duration:1.5s; transition-property:transform}
+	#mnav li:last-child > a {display:none}
+	#mnav li:last-child > .sub-menu a {display:block}
+	#mnav li:last-child > .sub-menu {display:flex; flex-wrap:wrap; justify-content:center}
+	#mnav li:last-child li {display:inline-block; width:max-content; padding:0 30px}
+	#mnav li:last-child li:first-child {padding:0 30px 0 0}
+	#mnav li:last-child li:last-child {padding:0 0 0 30px}
+	#mnav li:last-child li:nth-child(2) {border-left:1px solid #fff; border-right:1px solid #fff}
+	#mnav li:nth-child(2n-1) {transform:translateX(-15%); transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1); opacity:0}
+	#mnav li:nth-child(2n) {transform:translateX(15%); transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1); opacity:0}
+	#mnav.mnav li:nth-child(2n-1), #mnav.mnav li:nth-child(2n) {transform:translateX(0); transition:all .56s cubic-bezier(0.52, 0.16, 0.24, 1); opacity:1}
+	/*NAVBAR-END*/
+
+
+	/*INTRO*/
+	#intro {position:relative; display:flex; flex-wrap:wrap; justify-content:center; height:100%; padding:0 15px}
+	#intro .row {height:100%; justify-content:center; align-items:center}
+	#intro .col-lg-10 {display:flex; justify-content:center; align-items:center; height:100%}
+	#intro .title {color:#000; text-align:center; margin:90px 0 0 0}
+
+	#section-bottom {position:absolute; width:100%; height:10%; bottom:5%}
+  #bottom-button {display:block; cursor:pointer; position:absolute; bottom:50%; border-radius:50%; width:50px; height:50px; padding:10px; left:50%; margin-left:-25px; transform:rotate(180deg); margin-bottom:-25px; animation:top-bottom 5s infinite ease}
+  #bottom-button .arrow-left, #bottom-button .arrow-right {width:45px; height:2px; background-color:#000; border-radius:1px; transition-property:transform; position:absolute}
+  #bottom-button .arrow-left {transform:translate3d(0, 0, 0) rotate(-45deg) scale(0.5, 1); top:22px; right:10px; transition:1s;}
+  #bottom-button .arrow-right {transform:translate3d(0, 0, 0) rotate(45deg) scale(0.5, 1); top:22px; left:10px; transition:1s}
+
+	@keyframes top-bottom {
+	0% {bottom:50%}
+	10% {bottom:25%}
+	20% {bottom:50%}
+	30% {bottom:25%}
+	40% {bottom:50%}
+	100% {bottom:50%}
+	}
+
+	#intro h1 {transform:translateY(150%); transition-timing-function:cubic-bezier(.42,0,.34,.99); opacity:0}
+	#intro.js-enter h1 {transform:translateY(0); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:2.5s; transition-duration:1.5s; transition-property:all; opacity:1}
+	#bottom-button {transform:translateY(-150%) rotate(180deg); transition-timing-function:cubic-bezier(.42,0,.34,.99); opacity:0}
+	#bottom-button.js-enter {transform:translateY(0) rotate(180deg); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:2.5s; transition-duration:1.5s; transition-property:all; opacity:1}
+	#up-button {display:none}
+	/*INTRO-END*/
+
+
+/*PORTFOLIO*/
+#portfolio .row {flex-direction:column-reverse; align-items:center}
+#portfolio .col-lg-5 {display:flex; align-items:center}
+#portfolio .img-1 {background: url('../SVNteh/img/3.jpg')}
+#portfolio .img-2 {background: url('../SVNteh/img/4.jpg')}
+/*PORTFOLIO-END*/
+
+
+/*SWIPER-SLIDE*/
+#portfolio .swiper, #services .swiper {height:460px; width:100%; padding:0 0 90px 0; margin:0}
+#portfolio .swiper-slide, #services .swiper-slide{height:100%; background-size:cover!important; border-radius:10px}
+#portfolio .swiper-button-prev, #portfolio .swiper-button-next {bottom:30px; color:#000; padding:0 7px; border:1px solid #000; border-radius:50%; transform:scale(1.2)}
+#services .swiper-button-prev, #services .swiper-button-next {bottom:2%; color:#000; padding:0 7px; border:1px solid #000; border-radius:50%; transform:scale(1.2)}
+#portfolio .swiper-button-next::after, #portfolio .swiper-button-prev::after, #services .swiper-button-next::after, #services .swiper-button-prev::after {font-size:30px; transform: scale(0.7)}
+/*SWIPER-SLIDE-END*/
+
+
+/*SERVICES*/
+#services {display:block; position:relative}
+#services > .row {height:100%; justify-content:center; align-items:center}
+#services h2 {font-size:28px; margin:0 0 30px 0}
+#services span {display:block; width:100%; font-size:18px; margin:0 0 15px 0; font-weight:lighter; text-align:center; font-family:Lora}
+#services .swiper-services h3 {position:absolute; bottom:-10%; margin:0; font-size:25px; width:100%; text-align:center}
+
+#services .service-1 {background:url('../SVNteh/img/1/1.jpg'); height:100%; background-size:cover; border-radius:10px}
+#services .service-2 {background:url('../SVNteh/img/1/2.jpg'); height:100%; background-size:cover; border-radius:10px}
+#services .service-3 {background:url('../SVNteh/img/1/3.jpg'); height:100%; background-size:cover; border-radius:10px}
+#services .service-4 {background:url('../SVNteh/img/1/4.jpg'); height:100%; background-size:cover; border-radius:10px}
+/*SERVICES-END*/
+
+
+
+
+
+
+/*ABOUT-US*/
+#about > .row {align-items:center}
+#about .col-lg-5 {display:flex; align-items:center}
+#about .table p:last-child {margin:0}
+#about .col-lg-5:nth-child(2) {justify-content:center}
+#about .about-img {background:url('../SVNteh/img/1.jpg'); width:500px; height:360px; background-size:cover; border-radius:10px}
+/*ABOUT-US-END*/
+
+
+/*CONTACT*/
+#contact {position:relative; padding:90px 45px}
+#contact form {display:flex; flex-wrap:wrap; padding:45px 0 0 0}
+#contact form p, #contact form input {display:block; width:100%; margin:0}
+#contact form p {width:100%}
+#contact form p {margin:0 0 30px 0}
+#contact input {border:none; background:transparent; color:#000; border-bottom:1px solid #000; padding:0 15px 15px 15px}
+#contact textarea {border:none; background:transparent; border-bottom:1px solid #000; resize:none; width:100%; height:200px; padding:0 15px}
+#contact input::placeholder, #contact textarea {color:#000; font-size:16px}
+#contact textarea:focus, #contact input:focus {outline:none}
+#contact .wpcf7-submit {border:none; font-size:18px; color:#fff; background:#000; padding:10px 15px; border-radius:10px}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance:none; margin:0}
+#contact input[type=number] {-moz-appearance:textfield}
+
+#contact .wpcf7-submit {margin:15px 0}
+#contact .wpcf7-spinner {margin:0}
+#contact form .wpcf7-response-output {color:#dc3232; font-family:Murecho; margin:15px 0; padding:0; text-align:center; border:none; display:block; width:100%; min-height:75px}
+#contact .wpcf7-form-control-wrap {width:100%; display:block}
+#contact .wpcf7-not-valid-tip {font-size:14px; font-weight:lighter; position:absolute; width:100%; height:max-content}
+#contact form p:nth-child(8) {display:flex; flex-direction:column; align-items:center; margin:0}
+
+
+
+#contact .contact-header {display:block; width:100%; margin:0 0 30px 0}
+#contact .contact-header h2 {font-size:28px; margin:0 0 45px 0}
+#contact .contact-header p {margin:0}
+#contact .contact-footer {display:flex; flex-wrap:wrap; width:100%; font-size:0; margin:0 0 30px 0}
+#contact .contact-footer .info {display:block; width:100%; margin:0 0 30px 0}
+#contact .contact-footer .social-media {display:flex; justify-content:center; align-items:center; font-size:30px; width:100%}
+#contact .contact-footer .social-media a {margin:0 15px 0 0}
+#contact .contact-footer .social-media i {color:#000}
+#contact .info a {display:block; font-size:16px; color:#000}
+/*CONTACT-END*/
+
+/*FOOTER*/
+footer {color:#000; font-size:12px; font-family:Lora; text-align:center; margin:0 0 30px 0}
+/*FOOTER-END*/
+}
+
+@media (min-width: 370px){
+	#portfolio .swiper, #services .swiper {width:100%; height:500px}
+	#about .about-img {width:400px; height:400px}
+}
+
+@media (min-width:768px) {
+	/*GLOBAL-PARAMETRS*/
+	.container-fluid {padding:90px 120px 0 120px}
+	h1 {font-size:35px}
+	h2 {font-size:20px}
+	h3{font-size:35px}
+	/*GLOBAL-PARAMETRS-END*/
+
+	/*NAVBAR*/
+	#mnav a {font-size:28px}
+	/*NAVBAR-END*/
+
+	/*PRELOADER*/
+	.preloader-logo {width:404px; height:144px; margin:0 0 60px 0}
+	.preloader-ring {width:80px; height:80px}
+	.preloader-ring div {width:64px; height:64px; margin:8px; border:4px solid #fff; border-color: #fff transparent transparent transparent}
+	/*PRELOADER-END*/
+
+	/* NAVBAR */
+	#navbar {padding:0 45px}
+	#mnav {width:60%; height:80%; left:0; bottom:0; margin:auto; border-radius:20px; transform:translateX(150%)}
+	/* NAVBAR-END */
+
+	/*INTRO*/
+	#up-button {display:block; cursor:pointer; position:fixed; bottom:5%; border-radius:50%; width:50px; height:50px; padding:10px; right:0; margin:0 25px 20px 0; z-index:999; border:1px solid #000; transform:translateX(150%); transition-timing-function:cubic-bezier(.42,0,.34,.99); opacity:0}
+	#up-button .arrow-left, .arrow-right {width:45px; height:2px; background-color:#000; border-radius:1px; transition-property:transform; position:absolute}
+  #up-button .arrow-left {transform:translate3d(0, 0, 0) rotate(-45deg) scale(0.5, 1); top:22px; right:9px; transition:1s;}
+  #up-button .arrow-right {transform:translate3d(0, 0, 0) rotate(45deg) scale(0.5, 1); top:22px; left:9px; transition:1s}
+	#up-button.js-enter {transform:translateY(0); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:2.5s; transition-duration:1.5s; transition-property:all; opacity:1}
+	/*INTRO-END*/
+
+	/*SERVICES*/
+	#services span {font-size:20px}
+	#services h2 {font-size:35px}
+	#services .swiper-services h3 {bottom:-10%; font-size:32px}
+	#portfolio .swiper-button-prev, #portfolio .swiper-button-next {transform:scale(1.4)}
+	#services .swiper-button-prev, #services .swiper-button-next {transform:scale(1.4)}
+	/*SERVICES-END*/
+
+	/*CONTACT*/
+	#contact {padding:90px 120px}
+	/*CONTACT-END*/
+
+	/*SLIDER-IMG-SIZE*/
+	#portfolio .swiper, #services .swiper {width:100%; height:680px; padding: 0 0 120px 0}
+	#about .about-img {width:100%; height:550px}
+	/*SLIDER-IMG-SIZE-END*/
+
+	#fader {position:fixed; height:100%; width:100%; z-index:1; background:rgba(0, 0, 0, 0); visibility:hidden; transition:all.3s}
+	#fader.active {z-index:2; background:rgba(0, 0, 0, 0.4); visibility:visible; transition:all.3s}
+}
+
+@media (min-width:1024px) {
+	/*GLOBAL-PARAMETRS*/
+	h2 {text-align:start}
+	h3 {text-align:start}
+	#intro.container-fluid > .row::after, #portfolio.container-fluid > .row::before, #about.container-fluid > .row::after, #services.container-fluid > .row::after{display:none}
+	.container-fluid {padding:90px 15px 0 15px}
+	/*GLOBAL-PARAMETRS-END*/
+
+	/* NAVBAR */
+	#mnav {width:40%}
+	/* NAVBAR-END */
+
+	/*PORTFOLIO*/
+	#portfolio .row {flex-direction:row}
+	/*PORTFOLIO-END*/
+
+	/*SERVICES*/
+	#services span {text-align:start}
+
+	#services .swiper-slide:nth-child(1) {transition-delay:200ms}
+	#services .swiper-slide:nth-child(2) {transition-delay:400ms}
+	#services .swiper-slide:nth-child(3) {transition-delay:200ms}
+	#services .swiper-slide:nth-child(4) {transition-delay:400ms}
+	/*SERVICES-END*/
+
+	/*CONTACT*/
+	#contact {padding:90px 15px}
+	#contact .col-lg-5{display:flex; flex-wrap:wrap; flex-direction:column; justify-content:space-between}
+	#contact .contact-header h2:after {content:""; display:block; width:20%; height:1px; background:#000}
+	#contact .contact-footer .info {width:70%; margin:0}
+	#contact .contact-footer .social-media {width:30%}
+	#contact form {padding:0}
+	#contact textarea {height:100px}
+	#contact .contact-footer .social-media .fa-facebook:hover {color:#3f62a9; transition:all.3s}
+	#contact .contact-footer .social-media .fa-instagram:hover {color:#d6003c; transition:all.3s}
+	#contact .wpcf7-submit {cursor:pointer; border: 1px solid #000}
+	#contact .wpcf7-submit:hover {background:transparent; color:#000; transition: all.3s}
+	/*CONTACT-END*/
+
+	/*SLIDER*/
+	#portfolio .swiper, #services .swiper {padding:25px 25px 90px 25px}
+	#portfolio .swiper, #services .swiper {height:600px}
+	#about .about-img {height:500px}
+	/*SLIDER-END*/
+}
+
+
+@media (min-width:1360px) {
+	.container-fluid {overflow:visible}
+}
+
+@media (min-width:1600px) {
+	/*GLOBAL-PARAMETRS*/
+	body {height:100%; margin:0}
+	ul {margin:0; padding:0; font-size:0}
+	li {list-style:none}
+	a {text-decoration:none}
+	h1 {font-size:48px; transition:all 0.75s ease-out; text-align:center}
+	h2 {font-size:20px; margin:0 0 15px 0; text-align:start}
+	h3 {font-size:48px; margin:0 0 45px 0; text-align:start}
+	.table {display:block; width:100%; height:max-content; position:relative}
+	.wp-block-image {margin:0!important}
+	.container-fluid {padding:90px 15px}
+
+
+	.img {perspective:1000px; transform-style:preserve-3d}
+	.img h1 {transform: translateZ(50px)}
+	/*GLOBAL-PARAMETRS-END*/
+
+
+/*PRELOADER*/
+.preloader {background:black; position:fixed; top:0; left:0; width:100%; height:100%; display:flex; justify-content:center; align-items:center; flex-direction:column; z-index:10}
+.slider {background:#fff; position:fixed; top:0; left:0; width:100%; height:100%; transform:translateY(100%); z-index:11}
+.preloader-logo {display:block; width:404px; height:144px; background:url("../SVNteh/logo/SAN-logo-white.svg"); background-repeat:no-repeat; background-size:cover; margin:0 0 60px 0}
+.preloader-ring {display:inline-block; position:relative; width:80px; height:80px}
+.preloader-ring div {box-sizing:border-box; display:block; position:absolute; width:64px; height:64px; margin:8px; border:4px solid #fff; border-radius:50%; animation:preloader-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite; border-color: #fff transparent transparent transparent}
+.preloader-ring div:nth-child(1) {animation-delay:-0.45s}
+.preloader-ring div:nth-child(2) {animation-delay:-0.3s}
+.preloader-ring div:nth-child(3) {animation-delay:-0.15s}
+@keyframes preloader-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*PRELOADER-END*/
+
+
+/*NAVBAR*/
+#navbar {position:absolute; background:transparent; z-index:3; padding:0 15px}
+#navbar .col-xl-8 {display:block}
+#navbar .logo-link {display:block; padding:15px 0}
+#navbar .logo {display:block; width:199.5px; height:72.8px; background:url("../SVNteh/logo/SAN-logo.svg"); background-repeat:repeat; background-size:auto; background-size:cover}
+#navbar .navbar-main {display:flex; flex-wrap:wrap; justify-content:flex-end; align-items:center; height:100%}
+#navbar li {display:inline-block; margin:0 30px 0 0; transform:translateY(-130px); transition-timing-function:cubic-bezier(.42,0,.34,.99)}
+#navbar li:last-child {padding:0 0 0 30px; margin:0; border-left:1px solid #000}
+#navbar li:last-child:hover .sub-menu {visibility:visible; opacity:1; transition:all 300ms}
+#navbar li:last-child .sub-menu {visibility:hidden; position:absolute; opacity:0; transition:all 300ms}
+#navbar li:last-child .sub-menu > li {margin:10px 0 0 0}
+#navbar li:last-child .sub-menu > li:last-child {padding:0; border:none}
+
+#navbar a{position:relative; color:#000; font-size:18px; font-family:Lora}
+#navbar li a:after {content:""; display:block; width:0; height:1px; position:absolute; bottom:0; background:#000; transition:all.3s}
+#navbar li a:hover::after {width:100%; transition:all.3s}
+#mnav {display:none}
+#open.nav-button {display:none}
+
+
+#navbar.js-enter .logo {transform:translateY(0); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:2.5s; transition-duration:1.5s; transition-property:transform}
+#navbar.js-enter li {transform:translateY(0); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-duration:2.5s; transition-property:transform}
+#navbar.js-enter li:nth-child(1) {transition-delay:2.6s}
+#navbar.js-enter li:nth-child(2) {transition-delay:2.7s}
+#navbar.js-enter li:nth-child(3) {transition-delay:2.8s}
+#navbar.js-enter li:nth-child(4) {transition-delay:2.9s}
+#navbar.js-enter li:nth-child(5) {transition-delay:3s}
+#navbar.js-enter li:nth-child(6) {transition-delay:3.1s}
+/*NAVBAR-END*/
+
+
+/*INTRO*/
+#intro {display:block; position:relative; padding:0 15px; height:100%}
+#intro .row {height:100%; justify-content:center; align-items:center}
+
+
+#intro h1 {transform:translateY(150%); transition-timing-function:cubic-bezier(.42,0,.34,.99); opacity:0}
+#intro.js-enter h1 {transform:translateY(0); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:2.5s; transition-duration:1.5s; transition-property:all; opacity:1}
+
+#section-bottom {bottom:5%}
+#bottom-button {transform:translateY(-150%) rotate(180deg); transition-timing-function:cubic-bezier(.42,0,.34,.99); opacity:0}
+#bottom-button.js-enter {transform:translateY(0) rotate(180deg); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:2.5s; transition-duration:1.5s; transition-property:all; opacity:1}
+
+/* #intro .intro-img {display:block; position:relative; flex:0 0 0; width:0%; height:100%; background:url("../SVNteh/img/intro-img.jpg"); background-repeat:no-repeat; border-radius:10px; transition-timing-function:cubic-bezier(.43,.26,.13,1.01); transition-duration:1.4s}
+#intro.js-enter .intro-img {width:100%; flex:0 0 100%; transition-delay:2.5s; transition-timing-function:cubic-bezier(.43,.26,.13,1.01)} */
+
+
+/* #intro .title {position:absolute; z-index:2; width:40%; left:90px; color:#000; margin:0; text-align:start}
+#intro .title div {display:block; position:relative; text-align:left; font-size:48px; font-family:Lora; transform:translate(130%); transition-timing-function:cubic-bezier(.42,0,.34,.99); opacity:0}
+#intro.js-enter h1 div:nth-child(1) {transform:translate(0); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:2.85s; transition-duration:1.5s; transition-property:transform; opacity:1}
+#intro.js-enter h1 div:nth-child(2) {transform:translate(0); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:2.95s; transition-duration:1.5s; transition-property:transform; opacity:1}
+#intro.js-enter h1 div:nth-child(3) {transform:translate(0); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:3.05s; transition-duration:1.5s; transition-property:transform; opacity:1}
+#intro.js-enter h1 div:nth-child(4) {transform:translate(0); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:3.15s; transition-duration:1.5s; transition-property:transform; opacity:1}
+#intro.js-enter h1 div:nth-child(5) {transform:translate(0); transition-timing-function:cubic-bezier(.42,0,.34,.99); transition-delay:3.25s; transition-duration:1.5s; transition-property:transform; opacity:1} */
+/*INTRO-END*/
+
+/*PORTFOLIO*/
+#portfolio .row {flex-direction:row}
+#portfolio .img-1 {background: url('../SVNteh/img/3.jpg'); height:100%; background-size:cover; border-radius:10px}
+#portfolio .img-2 {background: url('../SVNteh/img/4.jpg'); height:100%; background-size:cover; border-radius:10px}
+#portfolio .swiper {height:600px; width:600px; border-radius:10px}
+#portfolio img {background-size:cover; height:100%}
+
+
+#portfolio h2 {transition-delay:100ms}
+#portfolio h3 {transition-delay:200ms}
+#portfolio p {transition-delay:300ms}
+/*PORTFOLIO-END*/
+
+
+/*SWIPER-SLIDE*/
+#portfolio .swiper, #services .swiper {padding:0}
+#portfolio .swiper-button-prev, #portfolio .swiper-button-next, #services .swiper-button-prev, #services .swiper-button-next {display:none}
+/*SWIPER-SLIDE-END*/
+
+
+
+/*SERVICES*/
+/* #services {display:block; height:120%; position:relative;padding:90px 15px}
+#services > .row {height:100%; justify-content:center; align-items:center}
+#services .col-lg-10 {height:max-content}
+#services span {font-size:20px; text-align:start; color:#000; font-family:Lora; font-weight:lighter; margin:0 0 15px 0}
+#services h2 {font-size:48px; color:#000; font-weight:lighter; margin:0 0 60px 0}
+#services .wp-block-image img {height:100%}
+#services .col-lg-3 {z-index:2}
+#services .service {display:flex; width:100%; height:573px; justify-content:center; align-items:flex-end; padding:45px; background-size:cover!important; border-radius:10px}
+#services .col-lg-3:nth-child(1) .service {background:url('../SVNteh/img/1/1.jpg')}
+#services .col-lg-3:nth-child(2) .service {background:url('../SVNteh/img/1/2.jpg')}
+#services .col-lg-3:nth-child(3) .service {background:url('../SVNteh/img/1/3.jpg')}
+#services .col-lg-3:nth-child(4) .service {background:url('../SVNteh/img/1/4.jpg')}
+#services .col-lg-3 h3{color:#000; font-size:28px; position:absolute; margin:0; bottom:-60px} */
+#services {display:block; position:relative}
+#services > .row {justify-content:center; align-items:center}
+#services h2 {font-size:48px}
+
+
+#services img {background-size:cover; height:100%}
+#services .swiper-services {height:700px; width:100%; padding:15px 15px 100px 15px}
+#services .swiper-slide:nth-child(1) {transition-delay:200ms}
+#services .swiper-slide:nth-child(2) {transition-delay:400ms}
+#services .swiper-slide:nth-child(3) {transition-delay:600ms}
+#services .swiper-slide:nth-child(4) {transition-delay:800ms}
+#services .service-1 {background:url('../SVNteh/img/1/1.jpg'); height:100%; background-size:cover; border-radius:10px}
+#services .service-2 {background:url('../SVNteh/img/1/2.jpg'); height:100%; background-size:cover; border-radius:10px}
+#services .service-3 {background:url('../SVNteh/img/1/3.jpg'); height:100%; background-size:cover; border-radius:10px}
+#services .service-4 {background:url('../SVNteh/img/1/4.jpg'); height:100%; background-size:cover; border-radius:10px}
+#services .swiper-services h3 {bottom:-10%}
+
+/* #services .swiper-button-prev, #portfolio .swiper-button-next {bottom:30px; color:#000}
+#services .swiper-button-next::after, #portfolio .swiper-button-prev::after {font-size:30px}
+
+#portfolio .img-1 {background: url('../SVNteh/img/3.jpg'); height:100%; background-size:cover; border-radius:10px}
+#portfolio .img-2 {background: url('../SVNteh/img/4.jpg'); height:100%; background-size:cover; border-radius:10px} */
+
+/*SERVICES-END*/
+
+
+/*ABOUT-US*/
+#about > .row {align-items:center}
+#about .col-lg-5 {display:flex; align-items:center}
+#about .col-lg-5:nth-child(2) {justify-content:flex-end}
+#about .about-img {background: url('../SVNteh/img/1.jpg'); width:600px; height:700px; background-size:cover; border-radius:10px}
+/*ABOUT-US-END*/
+
+
+
+/*CONTACT*/
+#contact {position:relative; padding:90px 15px 150px 15px}
+#contact form {display:flex; flex-wrap:wrap; padding:0 45px}
+#contact form p, #contact form input {display:block; width:100%}
+#contact form p:nth-child(2), #contact form p:nth-child(3), #contact form p:nth-child(4), #contact form p:nth-child(5) {width:50%}
+#contact form p:nth-child(2), #contact form p:nth-child(4) {padding:0 15px 0 0}
+#contact form p:nth-child(3), #contact form p:nth-child(5) {padding:0 0 0 15px}
+
+
+#contact input {border:none; background:transparent; color:#000; border-bottom:1px solid #000; padding:0 0 15px 0}
+#contact textarea {border:none; background:transparent; border-bottom:1px solid #000; resize:none; width:100%; height:200px; padding:0}
+#contact input::placeholder, #contact textarea {color:#000; font-size:16px}
+#contact textarea:focus, #contact input:focus {outline:none}
+#contact .wpcf7-submit {border:none; font-size:18px; color:#fff; background:#000; border:1px solid #000; padding:10px 15px; border-radius:10px; transition:all.3s}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appearance:none; margin:0}
+#contact input[type=number] {-moz-appearance:textfield}
+
+
+#contact .contact-header {display:block; width:100%; padding:0 45px; margin:0}
+#contact .col-lg-5 {display:flex; flex-wrap:wrap; flex-direction:column; justify-content:space-between}
+#contact .contact-header h2 {font-size:48px; margin:0 0 120px 0}
+#contact .contact-header p {margin:0}
+#contact .contact-footer {display:flex; flex-wrap:wrap; width:100%; font-size:0; padding:0 45px; margin:0}
+#contact .contact-footer .info {display:block; width:50%; margin:0}
+#contact .contact-footer .social-media {display:flex; justify-content:flex-end; align-items:center; font-size:30px; width:50%}
+#contact .contact-footer .social-media a {margin:0 15px 0 0}
+#contact .contact-footer .social-media i {color:#000; cursor:pointer; transition:all.3s}
+#contact .info a {font-size:16px; color:#000}
+/*CONTACT-END*/
+
+/*FOOTER*/
+footer {color:#000; font-family:Lora; text-align:center; font-size:14px; margin:0}
+/*FOOTER-END*/
+}
